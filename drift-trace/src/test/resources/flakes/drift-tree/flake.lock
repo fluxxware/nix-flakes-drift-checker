@@ -1,0 +1,47 @@
+{
+  "nodes": {
+    "root": {
+      "inputs": {
+        "aggregator": "aggregator",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs"
+      }
+    },
+    "aggregator": {
+      "locked": {
+        "path": "./aggregator",
+        "type": "path"
+      },
+      "original": {
+        "path": "./aggregator",
+        "type": "path"
+      }
+    },
+    "home-manager": {
+      "locked": {
+        "lastModified": 1751234567,
+        "narHash": "sha256-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=",
+        "ref": "release-25.05",
+        "rev": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "type": "github"
+      },
+      "original": {
+        "ref": "release-25.05",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1751234567,
+        "narHash": "sha256-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb=",
+        "rev": "c8aa8cc00a5cb57fada0851a038d35c08a36a2b",
+        "type": "github"
+      },
+      "original": {
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,0 +1,23 @@
+{
+  "nodes": [
+    { "name": "root-flake-1", "path": "/fixtures/machine", "diskHash": "sha256-root", "lockHash": "sha256-root", "children": ["upstream-flake-1", "app-flake-1", "service-flake-1"] },
+    { "name": "upstream-flake-1", "path": null, "diskHash": null, "lockHash": null, "children": [] },
+    { "name": "app-flake-1", "path": "/fixtures/machine/app", "diskHash": "sha256-app", "lockHash": "sha256-app", "children": ["upstream-flake-2"] },
+    { "name": "upstream-flake-2", "path": null, "diskHash": null, "lockHash": null, "children": [] },
+    { "name": "service-flake-1", "path": "/fixtures/machine/service", "diskHash": "sha256-service", "lockHash": "sha256-service", "children": ["upstream-flake-3"] },
+    { "name": "upstream-flake-3", "path": null, "diskHash": null, "lockHash": null, "children": [] }
+  ],
+  "live": { "root-flake-1": true, "app-flake-1": true, "service-flake-1": true },
+  "expected": {
+    "statuses": {
+      "root-flake-1": [],
+      "upstream-flake-1": ["REMOTE"],
+      "app-flake-1": [],
+      "upstream-flake-2": ["REMOTE"],
+      "service-flake-1": [],
+      "upstream-flake-3": ["REMOTE"]
+    },
+    "unrefreshed": { "root-flake-1": [], "upstream-flake-1": [], "app-flake-1": [], "upstream-flake-2": [], "service-flake-1": [], "upstream-flake-3": [] },
+    "totals": { "total": 6, "synced": 6, "drifted": 0 }
+  }
+}

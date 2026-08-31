@@ -1,0 +1,24 @@
+{
+  "nodes": {
+    "root": {
+      "inputs": {
+        "flake-03": "flake-03"
+      }
+    },
+    "flake-03": {
+      "inputs": {},
+      "locked": {
+        "lastModified": 1786700001,
+        "narHash": "sha256-DRIFT-flake-03",
+        "path": "../flake-03",
+        "type": "path"
+      },
+      "original": {
+        "path": "../flake-03",
+        "type": "path"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

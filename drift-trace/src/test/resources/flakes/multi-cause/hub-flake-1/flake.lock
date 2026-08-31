@@ -1,0 +1,17 @@
+{
+  "nodes": {
+    "root": { "inputs": { "leaf-flake-1": "leaf-flake-1", "layer-flake-1": "layer-flake-1" } },
+    "leaf-flake-1": {
+      "inputs": {},
+      "locked": { "narHash": "sha256-leaf-a-lock", "path": "./leaf-flake-1", "type": "path" },
+      "original": { "path": "./leaf-flake-1", "type": "path" }
+    },
+    "layer-flake-1": {
+      "inputs": {},
+      "locked": { "narHash": "sha256-sub", "path": "./layer-flake-1", "type": "path" },
+      "original": { "path": "./layer-flake-1", "type": "path" }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,0 +1,11 @@
+{
+  "nodes": {
+    "root": { "inputs": { "upstream-flake-2": "upstream-flake-2" } },
+    "upstream-flake-2": {
+      "locked": { "narHash": "sha256-up2", "rev": "abc", "type": "github" },
+      "original": { "type": "github" }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

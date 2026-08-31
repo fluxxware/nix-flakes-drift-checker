@@ -1,0 +1,1198 @@
+{
+  "nodes": [
+    {
+      "name": "root",
+      "path": "/fixtures/machine",
+      "diskHash": "sha256-root",
+      "lockHash": "sha256-root",
+      "children": [
+        "flake-01"
+      ]
+    },
+    {
+      "name": "flake-01",
+      "path": "/fixtures/flakes/flake-01",
+      "diskHash": "sha256-flake-01",
+      "lockHash": "sha256-flake-01",
+      "children": [
+        "flake-02",
+        "flake-20",
+        "flake-09",
+        "flake-14",
+        "flake-21",
+        "flake-35",
+        "flake-12",
+        "flake-06",
+        "flake-11",
+        "flake-08",
+        "flake-34",
+        "flake-04",
+        "flake-13",
+        "flake-39",
+        "flake-58",
+        "flake-37",
+        "flake-38",
+        "flake-10",
+        "flake-19",
+        "flake-15",
+        "flake-16",
+        "flake-25",
+        "flake-31",
+        "flake-23",
+        "flake-26",
+        "flake-27",
+        "flake-29",
+        "flake-28",
+        "flake-30",
+        "flake-22",
+        "flake-07",
+        "flake-44",
+        "flake-43",
+        "flake-41",
+        "flake-45",
+        "flake-42",
+        "flake-52",
+        "flake-51",
+        "flake-48",
+        "flake-47",
+        "flake-50",
+        "flake-46",
+        "flake-36",
+        "flake-57",
+        "flake-56",
+        "flake-53",
+        "flake-54",
+        "flake-55",
+        "flake-49",
+        "flake-40",
+        "flake-05",
+        "flake-17",
+        "flake-24",
+        "flake-18",
+        "flake-32",
+        "flake-33"
+      ]
+    },
+    {
+      "name": "flake-02",
+      "path": "/fixtures/flakes/flake-02",
+      "diskHash": "sha256-flake-02",
+      "lockHash": "sha256-drift-flake-02",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-20",
+      "path": "/fixtures/flakes/flake-20",
+      "diskHash": "sha256-flake-20",
+      "lockHash": "sha256-flake-20",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-09",
+      "path": "/fixtures/flakes/flake-09",
+      "diskHash": "sha256-flake-09",
+      "lockHash": "sha256-flake-09",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-14",
+      "path": "/fixtures/flakes/flake-14",
+      "diskHash": "sha256-flake-14",
+      "lockHash": "sha256-flake-14",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-21",
+      "path": "/fixtures/flakes/flake-21",
+      "diskHash": "sha256-flake-21",
+      "lockHash": "sha256-flake-21",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-35",
+      "path": "/fixtures/flakes/flake-35",
+      "diskHash": "sha256-flake-35",
+      "lockHash": "sha256-flake-35",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-12",
+      "path": "/fixtures/flakes/flake-12",
+      "diskHash": "sha256-flake-12",
+      "lockHash": "sha256-flake-12",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-06",
+      "path": "/fixtures/flakes/flake-06",
+      "diskHash": "sha256-flake-06",
+      "lockHash": "sha256-flake-06",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-11",
+      "path": "/fixtures/flakes/flake-11",
+      "diskHash": "sha256-flake-11",
+      "lockHash": "sha256-flake-11",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-08",
+      "path": "/fixtures/flakes/flake-08",
+      "diskHash": "sha256-flake-08",
+      "lockHash": "sha256-flake-08",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-34",
+      "path": "/fixtures/flakes/flake-34",
+      "diskHash": "sha256-flake-34",
+      "lockHash": "sha256-flake-34",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-04",
+      "path": "/fixtures/flakes/flake-04",
+      "diskHash": "sha256-flake-04",
+      "lockHash": "sha256-drift-flake-04",
+      "children": [
+        "flake-03"
+      ]
+    },
+    {
+      "name": "flake-03",
+      "path": "/fixtures/flakes/flake-03",
+      "diskHash": "sha256-flake-03",
+      "lockHash": "sha256-drift-flake-03",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-13",
+      "path": "/fixtures/flakes/flake-13",
+      "diskHash": "sha256-flake-13",
+      "lockHash": "sha256-flake-13",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-39",
+      "path": "/fixtures/flakes/flake-39",
+      "diskHash": "sha256-flake-39",
+      "lockHash": "sha256-flake-39",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-58",
+      "path": "/fixtures/flakes/flake-58",
+      "diskHash": "sha256-flake-58",
+      "lockHash": "sha256-flake-58",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-37",
+      "path": "/fixtures/flakes/flake-37",
+      "diskHash": "sha256-flake-37",
+      "lockHash": "sha256-flake-37",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-38",
+      "path": "/fixtures/flakes/flake-38",
+      "diskHash": "sha256-flake-38",
+      "lockHash": "sha256-flake-38",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-10",
+      "path": "/fixtures/flakes/flake-10",
+      "diskHash": "sha256-flake-10",
+      "lockHash": "sha256-flake-10",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-19",
+      "path": "/fixtures/flakes/flake-19",
+      "diskHash": "sha256-flake-19",
+      "lockHash": "sha256-flake-19",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-15",
+      "path": "/fixtures/flakes/flake-15",
+      "diskHash": "sha256-flake-15",
+      "lockHash": "sha256-flake-15",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-16",
+      "path": "/fixtures/flakes/flake-16",
+      "diskHash": "sha256-flake-16",
+      "lockHash": "sha256-flake-16",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-25",
+      "path": "/fixtures/flakes/flake-25",
+      "diskHash": "sha256-flake-25",
+      "lockHash": "sha256-flake-25",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-31",
+      "path": "/fixtures/flakes/flake-31",
+      "diskHash": "sha256-flake-31",
+      "lockHash": "sha256-flake-31",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-23",
+      "path": "/fixtures/flakes/flake-23",
+      "diskHash": "sha256-flake-23",
+      "lockHash": "sha256-flake-23",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-26",
+      "path": "/fixtures/flakes/flake-26",
+      "diskHash": "sha256-flake-26",
+      "lockHash": "sha256-flake-26",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-27",
+      "path": "/fixtures/flakes/flake-27",
+      "diskHash": "sha256-flake-27",
+      "lockHash": "sha256-flake-27",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-29",
+      "path": "/fixtures/flakes/flake-29",
+      "diskHash": "sha256-flake-29",
+      "lockHash": "sha256-flake-29",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-28",
+      "path": "/fixtures/flakes/flake-28",
+      "diskHash": "sha256-flake-28",
+      "lockHash": "sha256-flake-28",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-30",
+      "path": "/fixtures/flakes/flake-30",
+      "diskHash": "sha256-flake-30",
+      "lockHash": "sha256-flake-30",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-22",
+      "path": "/fixtures/flakes/flake-22",
+      "diskHash": "sha256-flake-22",
+      "lockHash": "sha256-flake-22",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-07",
+      "path": "/fixtures/flakes/flake-07",
+      "diskHash": "sha256-flake-07",
+      "lockHash": "sha256-flake-07",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-44",
+      "path": "/fixtures/flakes/flake-44",
+      "diskHash": "sha256-flake-44",
+      "lockHash": "sha256-flake-44",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-43",
+      "path": "/fixtures/flakes/flake-43",
+      "diskHash": "sha256-flake-43",
+      "lockHash": "sha256-flake-43",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-41",
+      "path": "/fixtures/flakes/flake-41",
+      "diskHash": "sha256-flake-41",
+      "lockHash": "sha256-flake-41",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-45",
+      "path": "/fixtures/flakes/flake-45",
+      "diskHash": "sha256-flake-45",
+      "lockHash": "sha256-flake-45",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-42",
+      "path": "/fixtures/flakes/flake-42",
+      "diskHash": "sha256-flake-42",
+      "lockHash": "sha256-flake-42",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-52",
+      "path": "/fixtures/flakes/flake-52",
+      "diskHash": "sha256-flake-52",
+      "lockHash": "sha256-flake-52",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-51",
+      "path": "/fixtures/flakes/flake-51",
+      "diskHash": "sha256-flake-51",
+      "lockHash": "sha256-flake-51",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-48",
+      "path": "/fixtures/flakes/flake-48",
+      "diskHash": "sha256-flake-48",
+      "lockHash": "sha256-flake-48",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-47",
+      "path": "/fixtures/flakes/flake-47",
+      "diskHash": "sha256-flake-47",
+      "lockHash": "sha256-flake-47",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-50",
+      "path": "/fixtures/flakes/flake-50",
+      "diskHash": "sha256-flake-50",
+      "lockHash": "sha256-flake-50",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-46",
+      "path": "/fixtures/flakes/flake-46",
+      "diskHash": "sha256-flake-46",
+      "lockHash": "sha256-flake-46",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-36",
+      "path": "/fixtures/flakes/flake-36",
+      "diskHash": "sha256-flake-36",
+      "lockHash": "sha256-flake-36",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-57",
+      "path": "/fixtures/flakes/flake-57",
+      "diskHash": "sha256-flake-57",
+      "lockHash": "sha256-flake-57",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-56",
+      "path": "/fixtures/flakes/flake-56",
+      "diskHash": "sha256-flake-56",
+      "lockHash": "sha256-flake-56",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-53",
+      "path": "/fixtures/flakes/flake-53",
+      "diskHash": "sha256-flake-53",
+      "lockHash": "sha256-flake-53",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-54",
+      "path": "/fixtures/flakes/flake-54",
+      "diskHash": "sha256-flake-54",
+      "lockHash": "sha256-flake-54",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-55",
+      "path": "/fixtures/flakes/flake-55",
+      "diskHash": "sha256-flake-55",
+      "lockHash": "sha256-flake-55",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-49",
+      "path": "/fixtures/flakes/flake-49",
+      "diskHash": "sha256-flake-49",
+      "lockHash": "sha256-flake-49",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-40",
+      "path": "/fixtures/flakes/flake-40",
+      "diskHash": "sha256-flake-40",
+      "lockHash": "sha256-flake-40",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-05",
+      "path": "/fixtures/flakes/flake-05",
+      "diskHash": "sha256-flake-05",
+      "lockHash": "sha256-flake-05",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-17",
+      "path": "/fixtures/flakes/flake-17",
+      "diskHash": "sha256-flake-17",
+      "lockHash": "sha256-flake-17",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-24",
+      "path": "/fixtures/flakes/flake-24",
+      "diskHash": "sha256-flake-24",
+      "lockHash": "sha256-flake-24",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-18",
+      "path": "/fixtures/flakes/flake-18",
+      "diskHash": "sha256-flake-18",
+      "lockHash": "sha256-flake-18",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-32",
+      "path": "/fixtures/flakes/flake-32",
+      "diskHash": "sha256-flake-32",
+      "lockHash": "sha256-flake-32",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    },
+    {
+      "name": "flake-33",
+      "path": "/fixtures/flakes/flake-33",
+      "diskHash": "sha256-flake-33",
+      "lockHash": "sha256-flake-33",
+      "children": [
+        "nixpkgs"
+      ]
+    },
+    {
+      "name": "nixpkgs",
+      "path": null,
+      "diskHash": "sha256-nixpkgs",
+      "lockHash": "sha256-remote-nixpkgs",
+      "children": []
+    }
+  ],
+  "live": {
+    "root": true,
+    "flake-01": true,
+    "flake-02": false,
+    "nixpkgs": false,
+    "flake-20": true,
+    "flake-09": true,
+    "flake-14": true,
+    "flake-21": true,
+    "flake-35": true,
+    "flake-12": true,
+    "flake-06": true,
+    "flake-11": true,
+    "flake-08": true,
+    "flake-34": true,
+    "flake-04": false,
+    "flake-03": false,
+    "flake-13": true,
+    "flake-39": true,
+    "flake-58": true,
+    "flake-37": true,
+    "flake-38": true,
+    "flake-10": true,
+    "flake-19": true,
+    "flake-15": true,
+    "flake-16": true,
+    "flake-25": true,
+    "flake-31": true,
+    "flake-23": true,
+    "flake-26": true,
+    "flake-27": true,
+    "flake-29": true,
+    "flake-28": true,
+    "flake-30": true,
+    "flake-22": true,
+    "flake-07": true,
+    "flake-44": true,
+    "flake-43": true,
+    "flake-41": true,
+    "flake-45": true,
+    "flake-42": true,
+    "flake-52": true,
+    "flake-51": true,
+    "flake-48": true,
+    "flake-47": true,
+    "flake-50": true,
+    "flake-46": true,
+    "flake-36": true,
+    "flake-57": true,
+    "flake-56": true,
+    "flake-53": true,
+    "flake-54": true,
+    "flake-55": true,
+    "flake-49": true,
+    "flake-40": true,
+    "flake-05": true,
+    "flake-17": true,
+    "flake-24": true,
+    "flake-18": true,
+    "flake-32": true,
+    "flake-33": true
+  },
+  "expected": {
+    "statuses": {
+      "root": [
+        "CHAIN_STALE_TRANSITIVE"
+      ],
+      "flake-01": [
+        "CHAIN_STALE_TRANSITIVE"
+      ],
+      "flake-02": [
+        "CHAIN_STALE_CAUSE",
+        "LOCAL_DRIFT"
+      ],
+      "nixpkgs": [
+        "REMOTE"
+      ],
+      "flake-20": [],
+      "flake-09": [],
+      "flake-14": [],
+      "flake-21": [],
+      "flake-35": [],
+      "flake-12": [],
+      "flake-06": [],
+      "flake-11": [],
+      "flake-08": [],
+      "flake-34": [],
+      "flake-04": [
+        "CHAIN_STALE_CAUSE",
+        "CHAIN_STALE_TRANSITIVE",
+        "LOCAL_DRIFT"
+      ],
+      "flake-03": [
+        "CHAIN_STALE_CAUSE",
+        "LOCAL_DRIFT"
+      ],
+      "flake-13": [],
+      "flake-39": [],
+      "flake-58": [],
+      "flake-37": [],
+      "flake-38": [],
+      "flake-10": [],
+      "flake-19": [],
+      "flake-15": [],
+      "flake-16": [],
+      "flake-25": [],
+      "flake-31": [],
+      "flake-23": [],
+      "flake-26": [],
+      "flake-27": [],
+      "flake-29": [],
+      "flake-28": [],
+      "flake-30": [],
+      "flake-22": [],
+      "flake-07": [],
+      "flake-44": [],
+      "flake-43": [],
+      "flake-41": [],
+      "flake-45": [],
+      "flake-42": [],
+      "flake-52": [],
+      "flake-51": [],
+      "flake-48": [],
+      "flake-47": [],
+      "flake-50": [],
+      "flake-46": [],
+      "flake-36": [],
+      "flake-57": [],
+      "flake-56": [],
+      "flake-53": [],
+      "flake-54": [],
+      "flake-55": [],
+      "flake-49": [],
+      "flake-40": [],
+      "flake-05": [],
+      "flake-17": [],
+      "flake-24": [],
+      "flake-18": [],
+      "flake-32": [],
+      "flake-33": []
+    },
+    "unrefreshed": {
+      "root": [
+        "flake-01"
+      ],
+      "flake-01": [
+        "flake-02",
+        "flake-04"
+      ],
+      "flake-02": [],
+      "nixpkgs": [],
+      "flake-20": [],
+      "flake-09": [],
+      "flake-14": [],
+      "flake-21": [],
+      "flake-35": [],
+      "flake-12": [],
+      "flake-06": [],
+      "flake-11": [],
+      "flake-08": [],
+      "flake-34": [],
+      "flake-04": [
+        "flake-03"
+      ],
+      "flake-03": [],
+      "flake-13": [],
+      "flake-39": [],
+      "flake-58": [],
+      "flake-37": [],
+      "flake-38": [],
+      "flake-10": [],
+      "flake-19": [],
+      "flake-15": [],
+      "flake-16": [],
+      "flake-25": [],
+      "flake-31": [],
+      "flake-23": [],
+      "flake-26": [],
+      "flake-27": [],
+      "flake-29": [],
+      "flake-28": [],
+      "flake-30": [],
+      "flake-22": [],
+      "flake-07": [],
+      "flake-44": [],
+      "flake-43": [],
+      "flake-41": [],
+      "flake-45": [],
+      "flake-42": [],
+      "flake-52": [],
+      "flake-51": [],
+      "flake-48": [],
+      "flake-47": [],
+      "flake-50": [],
+      "flake-46": [],
+      "flake-36": [],
+      "flake-57": [],
+      "flake-56": [],
+      "flake-53": [],
+      "flake-54": [],
+      "flake-55": [],
+      "flake-49": [],
+      "flake-40": [],
+      "flake-05": [],
+      "flake-17": [],
+      "flake-24": [],
+      "flake-18": [],
+      "flake-32": [],
+      "flake-33": []
+    },
+    "totals": {
+      "total": 115,
+      "synced": 110,
+      "drifted": 5
+    }
+  }
+}

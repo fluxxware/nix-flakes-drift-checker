@@ -1,0 +1,12 @@
+{
+  "nodes": {
+    "root": { "inputs": { "layer-flake-2": "layer-flake-2" } },
+    "layer-flake-2": {
+      "inputs": {},
+      "locked": { "narHash": "sha256-layer-2", "path": "./layer-2", "type": "path" },
+      "original": { "path": "./layer-2", "type": "path" }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    { "name": "root-flake-1", "path": "/fixtures/machine", "diskHash": "sha256-root", "lockHash": "sha256-root", "children": ["hub-flake-1"] },
+    { "name": "hub-flake-1", "path": "/fixtures/machine/hub", "diskHash": "sha256-hub", "lockHash": "sha256-hub", "children": ["leaf-flake-1", "layer-flake-1"] },
+    { "name": "leaf-flake-1", "path": "/fixtures/machine/hub/leaf-a", "diskHash": "sha256-leaf-a-disk", "lockHash": "sha256-leaf-a-lock", "children": [] },
+    { "name": "layer-flake-1", "path": "/fixtures/machine/hub/sub", "diskHash": "sha256-sub", "lockHash": "sha256-sub", "children": ["leaf-flake-2"] },
+    { "name": "leaf-flake-2", "path": "/fixtures/machine/hub/sub/leaf-b", "diskHash": "sha256-leaf-b-disk", "lockHash": "sha256-leaf-b-lock", "children": [] }
+  ],
+  "live": { "root-flake-1": true, "hub-flake-1": true, "leaf-flake-1": true, "layer-flake-1": true, "leaf-flake-2": true },
+  "expected": {
+    "statuses": {
+      "root-flake-1": ["CHAIN_STALE_TRANSITIVE"],
+      "hub-flake-1": ["CHAIN_STALE_TRANSITIVE"],
+      "leaf-flake-1": ["LOCAL_DRIFT", "CHAIN_STALE_CAUSE"],
+      "layer-flake-1": ["CHAIN_STALE_TRANSITIVE"],
+      "leaf-flake-2": ["LOCAL_DRIFT", "CHAIN_STALE_CAUSE"]
+    },
+    "unrefreshed": { "root-flake-1": ["hub-flake-1"], "hub-flake-1": ["leaf-flake-1", "layer-flake-1"], "leaf-flake-1": [], "layer-flake-1": ["leaf-flake-2"], "leaf-flake-2": [] },
+    "totals": { "total": 5, "synced": 0, "drifted": 5 }
+  }
+}

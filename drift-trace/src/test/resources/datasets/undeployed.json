@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    { "name": "root-flake-1", "path": "/fixtures/machine", "diskHash": "sha256-root", "lockHash": "sha256-root", "children": ["app-flake-1"] },
+    { "name": "app-flake-1", "path": "/fixtures/machine/app", "diskHash": "sha256-app", "lockHash": "sha256-app", "children": [] }
+  ],
+  "live": { "root-flake-1": true, "app-flake-1": false },
+  "expected": {
+    "statuses": {
+      "root-flake-1": [],
+      "app-flake-1": ["UNDEPLOYED"]
+    },
+    "unrefreshed": { "root-flake-1": [], "app-flake-1": [] },
+    "totals": { "total": 2, "synced": 1, "drifted": 1 }
+  }
+}

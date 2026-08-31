@@ -1,0 +1,16 @@
+{
+  "nodes": {
+    "root": { "inputs": { "app-flake-1": "app-flake-1" } },
+    "app-flake-1": {
+      "inputs": {},
+      "locked": {
+        "narHash": "sha256-app-deployed",
+        "path": "./app",
+        "type": "path"
+      },
+      "original": { "path": "./app", "type": "path" }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

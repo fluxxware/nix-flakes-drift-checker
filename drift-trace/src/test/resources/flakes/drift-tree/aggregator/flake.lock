@@ -1,0 +1,56 @@
+{
+  "nodes": {
+    "root": {
+      "inputs": {
+        "leaf-module": "leaf-module",
+        "hub-flake": "hub-flake",
+        "nixpkgs": "nixpkgs"
+      }
+    },
+    "leaf-module": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1786748856,
+        "narHash": "sha256-gBSHSEOg8erAvui0MJTHaJAx3we5PlWxx56T7lW2Rsw=",
+        "path": "/fixtures/leaf-module",
+        "type": "path"
+      },
+      "original": {
+        "path": "/fixtures/leaf-module",
+        "type": "path"
+      }
+    },
+    "hub-flake": {
+      "inputs": {
+        "leaf-app": "leaf-app",
+        "remote-input": "remote-input",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1786746673,
+        "narHash": "sha256-k2opEK6f6cwqYd31WlxcgnRU8bZw6IRw+fFvF43ZVaI=",
+        "path": "/fixtures/hub-flake",
+        "type": "path"
+      },
+      "original": {
+        "path": "/fixtures/hub-flake",
+        "type": "path"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1751234567,
+        "narHash": "sha256-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb=",
+        "rev": "c8aa8cc00a5cb57fada0851a038d35c08a36a2b",
+        "type": "github"
+      },
+      "original": {
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

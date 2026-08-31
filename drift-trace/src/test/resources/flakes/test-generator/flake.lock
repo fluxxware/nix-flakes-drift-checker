@@ -1,0 +1,24 @@
+{
+  "nodes": {
+    "flake-01": {
+      "inputs": {},
+      "locked": {
+        "lastModified": 1786700000,
+        "narHash": "sha256-nkMhYWPZYpxh6AIOS0mvzbq/gX7PBkMdZwot1BbsNwU=",
+        "path": "flake-01",
+        "type": "path"
+      },
+      "original": {
+        "path": "flake-01",
+        "type": "path"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-01": "flake-01"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
