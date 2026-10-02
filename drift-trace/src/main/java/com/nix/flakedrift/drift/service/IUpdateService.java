@@ -20,6 +20,17 @@ public interface IUpdateService {
      * Runs {@code nix flake update --flake <dir>} on every candidate, deepest first.
      * Returns the per-flake before/after lock fingerprints + raw nix output
      * (for the audit history). Aborts on first failure.
+     *
+     * @param allowDirtyLocks when {@code true}, adds
+     *        {@code --option allow-dirty-locks true} to the {@code nix flake update}
+     *        and {@code nix flake lock} invocations, so dirty git workdir inputs
+     *        (e.g. local {@code git+file://} dev flakes) can be locked via their
+     *        NAR hash instead of being rejected as unlocked inputs.
      */
-    List<UpdateResultDto> updateAll(Path flakeRootAbsolutePath);
+    List<UpdateResultDto> updateAll(Path flakeRootAbsolutePath, boolean allowDirtyLocks);
+
+    /** Strict locking — equivalent to {@link #updateAll(Path, boolean) updateAll(root, false)}. */
+    default List<UpdateResultDto> updateAll(Path flakeRootAbsolutePath) {
+        return updateAll(flakeRootAbsolutePath, false);
+    }
 }

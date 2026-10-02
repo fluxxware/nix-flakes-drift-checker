@@ -29,6 +29,11 @@ public final class UpdateCommand implements Callable<Integer> {
     @Option(names = "--history", description = "Override the update-history directory.")
     private Path historyOverride;
 
+    @Option(names = "--allow-dirty-locks",
+            description = "Pass --option allow-dirty-locks true to nix, so dirty git workdir "
+                    + "inputs (e.g. local git+file:// dev flakes) can be locked via their NAR hash.")
+    private boolean allowDirtyLocks;
+
     @Override
     public Integer call() {
         ServiceRegistry registry = new ServiceRegistry();
@@ -48,7 +53,7 @@ public final class UpdateCommand implements Callable<Integer> {
             return 0;
         }
 
-        List<UpdateResultDto> results = registry.update().updateAll(scanRoot);
+        List<UpdateResultDto> results = registry.update().updateAll(scanRoot, allowDirtyLocks);
         for (UpdateResultDto result : results) {
             System.out.printf("[UPDATE] %-10s d%d  %s  %s → %s%n",
                     result.changed() ? "changed" : "same",

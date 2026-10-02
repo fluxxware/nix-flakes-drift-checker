@@ -84,6 +84,11 @@ public final class UpdateServiceImpl implements IUpdateService {
 
     @Override
     public List<UpdateResultDto> updateAll(Path flakeRootAbsolutePath) {
+        return updateAll(flakeRootAbsolutePath, false);
+    }
+
+    @Override
+    public List<UpdateResultDto> updateAll(Path flakeRootAbsolutePath, boolean allowDirtyLocks) {
         FlakeDependencyGraph tree = workspaceGraphService.buildDependencyGraph(flakeRootAbsolutePath);
         Map<FlakeGraphNode, Set<DriftType>> drift = driftCompareService.evaluate(tree, Map.of());
         List<FlakeGraphNode> candidates = tree.allNodes().stream()
@@ -100,7 +105,7 @@ public final class UpdateServiceImpl implements IUpdateService {
             if (!hasOwnLock(candidate)) {
                 continue; // no lock file -> it tracks the parent lock, nothing to update here.
             }
-            updateLock(candidate, results);
+            updateLock(candidate, allowDirtyLocks, results);
         }
 
         // Surgical re-pin of non-stale ancestors whose lock must now snapshot the
@@ -123,15 +128,16 @@ public final class UpdateServiceImpl implements IUpdateService {
         }
         rePins.sort(Comparator.comparingInt(RePin::depth).reversed().thenComparing(r -> r.childName));
         for (RePin rePin : rePins) {
-            updateRePin(rePin, results);
+            updateRePin(rePin, allowDirtyLocks, results);
         }
         return results;
     }
 
-    private void updateLock(FlakeGraphNode node, List<UpdateResultDto> results) {
+    private void updateLock(FlakeGraphNode node, boolean allowDirtyLocks, List<UpdateResultDto> results) {
         Path lock = node.getPath().resolve("flake.lock");
         String before = fingerprint(lock);
-        String output = nixCommandService.run(List.of("nix", "flake", "update", "--flake", node.getPath().toString()));
+        String output = nixCommandService.run(
+                nixFlakeUpdate(node.getPath(), allowDirtyLocks));
         String after = fingerprint(lock);
         results.add(new UpdateResultDto(
                 node.getName(),
@@ -142,11 +148,11 @@ public final class UpdateServiceImpl implements IUpdateService {
                 output));
     }
 
-    private void updateRePin(RePin rePin, List<UpdateResultDto> results) {
+    private void updateRePin(RePin rePin, boolean allowDirtyLocks, List<UpdateResultDto> results) {
         Path lock = rePin.ancestor.getPath().resolve("flake.lock");
         String before = fingerprint(lock);
-        String output = nixCommandService.run(List.of(
-                "nix", "flake", "lock", rePin.ancestor.getPath().toString(), "--update-input", rePin.childName));
+        String output = nixCommandService.run(
+                nixFlakeLock(rePin.ancestor.getPath(), rePin.childName, allowDirtyLocks));
         String after = fingerprint(lock);
         results.add(new UpdateResultDto(
                 rePin.ancestor.getName(),
@@ -155,6 +161,33 @@ public final class UpdateServiceImpl implements IUpdateService {
                 before,
                 after,
                 output));
+    }
+
+    /**
+     * {@code nix [--option allow-dirty-locks true] flake update --flake <dir>}.
+     * The global option is placed directly after {@code nix} so it cannot be
+     * misparsed as a {@code flake update} argument.
+     */
+    private static List<String> nixFlakeUpdate(Path dir, boolean allowDirtyLocks) {
+        List<String> cmd = new ArrayList<>(List.of("nix"));
+        if (allowDirtyLocks) {
+            cmd.addAll(List.of("--option", "allow-dirty-locks", "true"));
+        }
+        cmd.addAll(List.of("flake", "update", "--flake", dir.toString()));
+        return cmd;
+    }
+
+    /**
+     * {@code nix [--option allow-dirty-locks true] flake lock <dir> --update-input <child>}.
+     * Surgical re-pin of an ancestor that snapshots an already-updated descendant.
+     */
+    private static List<String> nixFlakeLock(Path dir, String childName, boolean allowDirtyLocks) {
+        List<String> cmd = new ArrayList<>(List.of("nix"));
+        if (allowDirtyLocks) {
+            cmd.addAll(List.of("--option", "allow-dirty-locks", "true"));
+        }
+        cmd.addAll(List.of("flake", "lock", dir.toString(), "--update-input", childName));
+        return cmd;
     }
 
     private static Map<FlakeGraphNode, FlakeGraphNode> parentMap(FlakeDependencyGraph tree) {

@@ -30,8 +30,15 @@ You will actually benefit from this tool if:
   commits to remote repos just to test a one-line change.
 - you want to try microflakes - this thing will save you plenty of time
 
-It automatically detects, tracks, and fixes dependency and version drifts across multi-module or composite flake structures where standard lock files fall short. 
-This thing ensures absolute determinism without requiring every local microflake to be an isolated Git repository.
+It automatically detects, tracks, and fixes dependency and version drifts across multi-module or composite flake structures where standard lock files fall short.
+This thing provides deterministic state tracking without requiring every local microflake to be an isolated Git repository.
+
+# Checking for drift example
+
+`check` walks the complete flake dependency tree and distinguishes
+local drift from transitive staleness and its root cause.
+
+![check-execution-example.png](attachments/check-execution-example.png)
 
 # Overview
 This command will print you and overview 
@@ -80,6 +87,24 @@ flakes-drift-checker --update --root /etc/nixos/
 ### Running history records (could be very useful for you to track your updates)
 ```bash
 flakes-drift-checker history
+```
+
+### git+file dirty evaluation
+using `file:///` as inputs can GREATLY increase your evaluation time, so this tool also allows bulk updates for dirty evaluation using
+```bash
+flakes-drift-checker update --root /etc/nixos/example-flake/nixos --allow-dirty-locks
+```
+without this option, your evaluation gets silently ignored (default nix behavior, actually) and you will see your update candidates are being skipped like : 
+```text
+⟐ 2026-10-01T00:16:55.941060762Z  tool=1.0-SNAPSHOT  root=/etc/nixos/example-flake/nixos
+[=] d1  example-flake sha256-YPewjbXDB… → sha256-YPewjbXDB…
+[=] d0  root         sha256-v2ibLxfoH… → sha256-v2ibLxfoH…
+summary: 2 total, 0 changed, 2 unchanged
+```
+Equivalently, enable it once system-wide so every Nix invocation (including
+`nixos-rebuild`) accepts dirty git inputs. Then the flag is no longer needed:
+```nix
+nix.settings.allow-dirty-locks = true;
 ```
 
 # Dev env running:
@@ -138,6 +163,15 @@ drift-trace/src/test/resources/scripts/gen_mock_store.sh \
 drift-trace/src/test/resources/scripts/gen_dataset.sh \
      --path $(pwd)/drift-trace/src/test/resources/flakes/staging-machine \
      --out-path $(pwd)/drift-trace/src/test/resources/datasets/staging-machine.json
+```
+
+### If you ever will evaluate it against mock store (This option is not listed and used in internal testing):
+The `--mock-store` option is intended for test fixtures and is not part
+of the normal CLI workflow.
+```bash
+nix-shell ./shell.nix --run './gradlew :app:run --rerun --args="check \
+  --root $(pwd)/drift-trace/src/test/resources/flakes/staging-machine \
+  --mock-store $(pwd)/drift-trace/src/test/resources/flakes/staging-machine/nix/store"'
 ```
 
 # Some notes I would like to leave here as a reminder of untypical project structure: 

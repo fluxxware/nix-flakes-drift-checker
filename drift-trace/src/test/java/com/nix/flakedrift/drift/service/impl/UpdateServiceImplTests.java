@@ -74,6 +74,25 @@ class UpdateServiceImplTests {
     }
 
     @Test
+    void givenAllowDirtyLocks_whenUpdateAll_thenPassesOptionToNix(@TempDir Path tmp) {
+        UpdateServiceImplTestBuilder testBuilder = new UpdateServiceImplTestBuilder(localUpdateTree(tmp))
+                .withSetupWorkspaceGraphMock()
+                .withMaterializedLocks();
+        IUpdateService service = testBuilder.build();
+
+        service.updateAll(tmp, true);
+
+        var order = inOrder(testBuilder.nix());
+        order.verify(testBuilder.nix()).run(List.of("nix", "--option", "allow-dirty-locks", "true",
+                "flake", "update", "--flake", tmp.resolve("agg/leaf").toString()));
+        order.verify(testBuilder.nix()).run(List.of("nix", "--option", "allow-dirty-locks", "true",
+                "flake", "update", "--flake", tmp.resolve("agg").toString()));
+        order.verify(testBuilder.nix()).run(List.of("nix", "--option", "allow-dirty-locks", "true",
+                "flake", "update", "--flake", tmp.toString()));
+        order.verifyNoMoreInteractions();
+    }
+
+    @Test
     void givenRealLockFiles_whenUpdateAll_thenDeepestFirstOrder(@TempDir Path tmp) {
         IUpdateService service = new UpdateServiceImplTestBuilder(localUpdateTree(tmp))
                 .withSetupWorkspaceGraphMock()
