@@ -78,11 +78,11 @@ flakes-drift-checker --help
 ```
 ### Updating actual flakes (default path option is `/etc/nixos`)
 ```bash
-flakes-drift-checker --update
+flakes-drift-checker update
 ```
 ### Updating with your root flake in another directory (using `--root` flag)
 ```bash
-flakes-drift-checker --update --root /etc/nixos/
+flakes-drift-checker update --root /etc/nixos/
 ```
 ### Running history records (could be very useful for you to track your updates)
 ```bash
