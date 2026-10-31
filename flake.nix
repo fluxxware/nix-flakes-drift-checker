@@ -92,5 +92,12 @@
       };
 
       devShells.${system}.default = import ./shell.nix;
+
+      # home-manager module: installs the native `flakes-drift-checker` binary.
+      homeManagerModules.default =
+        { pkgs, ... }:
+        {
+          home.packages = [ self.packages.${pkgs.system}.default ];
+        };
     };
 }
